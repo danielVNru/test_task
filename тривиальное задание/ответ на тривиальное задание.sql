@@ -1,0 +1,1 @@
+SELECT `books`.`title`, COUNT(*) AS `count` FROM `authors_and_books` LEFT JOIN `books` ON `books`.`id` = `authors_and_books`.`books_id` GROUP BY `authors_and_books`.`books_id` HAVING count >= 3;
